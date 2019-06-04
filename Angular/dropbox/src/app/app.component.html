@@ -1,0 +1,65 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+  Box
+  </h1>  
+</div>
+<div class="container">
+    <div class="card-columns d-flex justify-content-center">
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title d-flex justify-content-center">Files, Folders and Download</h4>
+                <div class="container">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" #searchInput placeholder="Enter full path to the folder (e.g. /myDirectory)">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" (click)="getFilesandFolders(searchInput.value)">Search</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5>
+                                Files and Folders
+                            </h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5>
+                                Download
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row" *ngFor = "let item of boxData">
+                        <div class="col-sm-6">
+                            <p>
+                                <i [ngClass]="item.directory == true ? 'fas fa-folder': 'fas fa-file'"></i> {{item.name}} 
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>
+                                <i *ngIf="!item.directory" class="fas fa-file-download" (click)="downloadFile(item)" alt="Click to download"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title  d-flex justify-content-center">File Upload</h4>
+                <div class="container">
+                    <form (ngSubmit)="onSubmit(pathInput.value)">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" #pathInput placeholder="Enter full path to the folder (e.g. /myDirectory)">                            
+                        </div>
+                        <div class="form-group">
+                            <input type="file" (change)="onUploadChange($event.target.files)" />
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+[
+    {
+      "path": "/My Documents",
+      "createdDate": "2019-04-23T05:02:27Z",
+      "size": 1923,
+      "parentFolderId": "0",
+      "name": "My Documents",
+      "modifiedDate": "2019-04-23T05:02:47Z",
+      "additionalProperties": {},
+      "id": "74259036474",
+      "directory": true,
+      "properties": {}
+    },
+    {
+      "path": "/asc.jpg",
+      "createdDate": "2019-04-23T05:03:04Z",
+      "size": 1923,
+      "parentFolderId": "0",
+      "name": "asc.jpg",
+      "modifiedDate": "2019-04-23T05:03:04Z",
+      "additionalProperties": {},
+      "id": "445106335900",
+      "directory": false,
+      "properties": {}
+    },
+    {
+      "path": "/Narender Jeggari.doc",
+      "createdDate": "2019-04-23T05:37:30Z",
+      "size": 69632,
+      "parentFolderId": "0",
+      "name": "Narender Jeggari.doc",
+      "modifiedDate": "2019-04-23T05:37:30Z",
+      "additionalProperties": {},
+      "id": "445124752578",
+      "directory": false,
+      "properties": {}
+    }
+  ]
